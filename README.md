@@ -33,6 +33,8 @@ Pi_Duo Project
 
   $ sudo rpi-update
 
+  Note: if you change from Pi 1 to Pi 2 (or vice versa), you need to update the kernel once more (only once).
+  
   Download this repository, copy and replace the files inside the Pi_Duo folder to your RPi file system.
 
   Inside /etc/init.d
