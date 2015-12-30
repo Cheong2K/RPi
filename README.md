@@ -6,46 +6,62 @@ Pi_Duo Project
 
 1. WiFi
 
-Edit config.txt lacated in the SD Card (e.g. with a SD card reader).
+  Edit config.txt lacated in the SD Card (e.g. with a SD card reader).
 
-Add the following line to the end:
+  Add the following line to the end:
 
-dtoverlay=sdio,poll_once=on
+  dtoverlay=sdio,poll_once=on
 
-Edit cmdline.txt, remove console=/dev/tty.AMA0
+  Edit cmdline.txt, remove console=/dev/tty.AMA0
 
-Boot into the RPi, you should be able to associate an WiFi AP.
+  Boot into the RPi, you should be able to associate an WiFi AP.
 
-Note: if you do not have a PC or SD card reader, boot into the RPi and use command line to do that:
+  Note: if you do not have a PC or SD card reader, boot into the RPi and use command line to do that:
 
-$ sudo nano /boot/config.txt
+  $ sudo nano /boot/config.txt
 
-You can check with the following command to see its IP address.
+  You can check with the following command to see its IP address.
 
-$ ifconfig
+  $ ifconfig
 
 
 2. Bluetooth
 
-After step 1, you should be able to get access to the Internet.
+  After step 1, you should be able to get access to the Internet.
 
-Use rpi-update to update your kernel to the latest version (e.g. 4.1.15)
+  Use rpi-update to update your kernel to the latest version (e.g. 4.1.15)
 
-$ sudo rpi-update
+  $ sudo rpi-update
 
-Download this repository, copy and replace the files inside the Pi_Duo folder to your RPi file system.
+  Download this repository, copy and replace the files inside the Pi_Duo folder to your RPi file system.
 
-Inside /etc/init.d
+  Inside /etc/init.d
 
-$ sudo update-rc.d -f brcm43438 defaults
+  $ sudo update-rc.d -f brcm43438 defaults
 
-Install bluez
+  Install bluez
 
-$ sudo apt-get install bluez
+  $ sudo apt-get install bluez
 
-Install Bluetooth Manager
+  Install Bluetooth Manager
 
-$ sudo apt-get install blueman
+  $ sudo apt-get install blueman
 
-Reboot the RPi and config your Bluetooth keyboard/mouse 
+  Reboot the RPi and config your Bluetooth keyboard/mouse 
 
+
+3. Testing
+
+  3.1 To test iBeacon
+  
+    https://github.com/dburr/linux-ibeacon/
+  
+  3.2 To test WiFi speed
+
+    $ wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
+
+  Note: do the same command on OSX, install brew (http://brew.sh/) and then
+    
+    $ brew install wget
+    
+  
