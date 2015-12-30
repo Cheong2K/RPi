@@ -58,10 +58,10 @@ Pi_Duo Project
   
   3.2 To test WiFi speed
 
-    $ wget http://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
+    $ curl -O ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
 
-  Note: do the same command on OSX, install brew (http://brew.sh/) and then
+  Note: do the similar command on OSX,
     
-    $ brew install wget
+    $ curl -O ftp://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
     
   
