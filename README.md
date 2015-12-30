@@ -12,6 +12,8 @@ Add the following line to the end:
 
 dtoverlay=sdio,poll_once=on
 
+Edit cmdline.txt, remove console=/dev/tty.AMA0
+
 Boot into the RPi, you should be able to associate an WiFi AP.
 
 Note: if you do not have a PC or SD card reader, boot into the RPi and use command line to do that:
