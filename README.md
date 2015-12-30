@@ -37,9 +37,14 @@ Pi_Duo Project
   
   Download this repository, copy and replace the files inside the Pi_Duo folder to your RPi file system.
 
+  Change mode to some files
+  
+  $ sudo chmod +x /usr/bin/brcm
+
   Inside /etc/init.d
 
-  $ sudo update-rc.d -f brcm43438 defaults
+  $ sudo chmod +x bcm43438
+  $ sudo update-rc.d -f bcm43438 defaults
 
   Install bluez
 
@@ -50,6 +55,10 @@ Pi_Duo Project
   $ sudo apt-get install blueman
 
   Reboot the RPi and config your Bluetooth keyboard/mouse 
+
+  You should see hci0 interface is up with this command
+  
+  $ hciconfig
 
 
 3. Testing
