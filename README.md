@@ -12,7 +12,7 @@ Pi_Duo Project
 
   dtoverlay=sdio,poll_once=on
 
-  Edit cmdline.txt, remove console=/dev/tty.AMA0
+  Edit cmdline.txt, remove console=ttyAMA0,115200
 
   Boot into the RPi, you should be able to associate an WiFi AP.
 
