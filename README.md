@@ -60,8 +60,7 @@ Pi_Duo Project
 
     $ curl -O ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
 
-  Note: do the similar command on OSX,
+  Note: do the same command on OSX to compare.
     
-    $ curl -O ftp://ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
     
   
