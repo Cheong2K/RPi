@@ -44,6 +44,7 @@ Pi_Duo Project
   Inside /etc/init.d
 
   $ sudo chmod +x bcm43438
+  
   $ sudo update-rc.d -f bcm43438 defaults
 
   Install bluez
