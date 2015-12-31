@@ -73,5 +73,10 @@ Pi_Duo Project
 
   Note: do the same command on OSX to compare.
     
+  3.3 After WiFi setup, you can use mDNS to get the IP address of the RPi (e.g. no HDMI connection)
+  
+    $  dns-sd -B _workstation._tcp
+    
+    And then, you can use ssh to login to the RPi
     
   
