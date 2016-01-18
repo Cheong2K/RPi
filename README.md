@@ -8,9 +8,10 @@ Pi_Duo Project
 
   Edit config.txt lacated in the SD Card (e.g. with a SD card reader).
 
-  Add the following line to the end:
+  Add the following two lines to the end:
 
   dtoverlay=sdio,poll_once=on
+  init_uart_clock=14745600
 
   Edit cmdline.txt, remove console=ttyAMA0,115200
 
