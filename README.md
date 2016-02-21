@@ -30,11 +30,7 @@ Pi_Duo Project
 
   After step 1, you should be able to get access to the Internet.
 
-  Use rpi-update to update your kernel to the latest version (e.g. 4.1.15)
-
-  $ sudo rpi-update
-
-  Note: if you change from Pi 1 to Pi 2 (or vice versa), you need to update the kernel once more (only once).
+  Use rpi-update to update your kernel to the latest version (e.g. 4.1.17)
   
   Download this repository, copy and replace the files inside the Pi_Duo folder to your RPi file system.
 
