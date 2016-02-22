@@ -37,9 +37,9 @@ Pi_Duo Project
   
 		$ sudo chmod +x /usr/bin/brcm
 
-		$ sudo chmod +x /etc/init.d/bcm43438
+		$ sudo chmod +x /etc/init.d/brcmbt
   
-		$ sudo update-rc.d -f bcm43438 defaults
+		$ sudo update-rc.d -f brcmbt defaults
 
 	Install BlueZ
 
