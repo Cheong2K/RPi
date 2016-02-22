@@ -4,7 +4,16 @@
 Pi_Duo Project
 
 
-1. WiFi
+1. Prerequisites
+
+	Install Noobs 1.7.0 (Linux kernel version 4.1.17) first:
+
+		https://www.raspberrypi.org/downloads/noobs/
+
+	Note: this package is only for kernel 4.1.17
+	
+	
+2. WiFi
 
 	Edit config.txt lacated in the SD Card (e.g. with a SD card reader).
 
@@ -27,7 +36,7 @@ Pi_Duo Project
 		$ ifconfig
 
 
-2. Bluetooth
+3. Bluetooth
 
 	After step 1, you should be able to get access to the Internet.
   
@@ -66,7 +75,7 @@ Pi_Duo Project
 		$ hciconfig
 
 
-3. Testing
+4. Testing
 
 	3.1 To test iBeacon, see:
   
