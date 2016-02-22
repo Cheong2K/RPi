@@ -51,6 +51,14 @@ Pi_Duo Project
 
 	Reboot the RPi and config your Bluetooth keyboard/mouse 
 
+
+	Note: The blueman has problem to show the pairing key for keyboards to pair. Start a command line and use 'bluetoothctl' and use blueman to do the pairing but use the pairing key shown in bluetoothctl. See 'pair.jpg'.
+
+		$ sudo bluetoothctl
+		[bluetooth]# agent KeyboardDisplay
+		[bluetooth]# default-agent
+	
+	
 	You should see hci0 interface is up with this command
   
 		$ hciconfig
