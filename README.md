@@ -93,4 +93,16 @@ Pi_Duo Project
     
 	And then, you can use ssh to login to the RPi
     
-  
+
+5. Known Issues
+
+	* Command 'reboot' will not work for the PiDuo, after reboot, the PiDuo will not work properly, e.g.
+	
+			$ sudo reboot  
+
+	* Workaround: use shutdown command and remove the power
+	
+			$ sudo shutdown now
+			
+	* This will be fixed in next board desgin by adding a GPIO to reset the PiDuo.
+	
