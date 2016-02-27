@@ -17,7 +17,7 @@ Pi_Duo Project
 
 	Edit config.txt lacated in the SD Card (e.g. with a SD card reader).
 
-	Add the following two lines to the end:
+	Add the following line to the file:
 
     	dtoverlay=sdio,poll_once=on
 
@@ -96,11 +96,11 @@ Pi_Duo Project
 
 5. Known Issues
 
-	* Command 'reboot' will not work for the PiDuo, after reboot, the PiDuo will not work properly, e.g.
+	* The command 'reboot' will not work for the PiDuo, after reboot, the PiDuo will not work properly, e.g.
 	
 			$ sudo reboot  
 
-	* Workaround: use shutdown command and remove the power
+	* Workaround: use the 'shutdown' command and remove the power from the RPi
 	
 			$ sudo shutdown now
 			
