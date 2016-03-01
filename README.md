@@ -6,11 +6,11 @@ Pi_Duo Project
 
 1. Prerequisites
 
-	Install Noobs 1.7.0 (Linux kernel version 4.1.17) first:
+	Install NOOBS 1.8.0 (Linux kernel version 4.1.18) first:
 
 		https://www.raspberrypi.org/downloads/noobs/
 
-	Note: this package is only for kernel 4.1.17
+	Note: this package is only for kernel NOOBS or above
 	
 	
 2. WiFi
@@ -40,7 +40,7 @@ Pi_Duo Project
 
 	After step 1, you should be able to get access to the Internet.
   
-	Download this repository, copy and replace the files inside the Pi_Duo folder to your RPi file system.
+	Download this repository, copy two files (brcm and brcmbt) to your Pi.
 
 	Change mode to some files and update rc.d:
   
@@ -50,16 +50,15 @@ Pi_Duo Project
   
 		$ sudo update-rc.d -f brcmbt defaults
 
-	Install BlueZ
-
-		$ sudo apt-get install bluez
-
 	Install Bluetooth Manager
 
 		$ sudo apt-get install blueman
 
-	Reboot the RPi and config your Bluetooth keyboard/mouse 
-
+	Reboot the RPi, you should see hci0 interface is up with this command
+  
+		$ hciconfig
+		
+	Config your Bluetooth keyboard/mouse using the Bluetooth icon near the clock (upper-right corner).
 
 	Note: The blueman has problem to show the pairing key for keyboards to pair. Start a command line and use 'bluetoothctl', type the commands as shown: 
 
@@ -68,11 +67,6 @@ Pi_Duo Project
 		[bluetooth]# default-agent
 	
 	Then, use blueman to do the pairing but use the pairing key shown in bluetoothctl. See 'pair.jpg'.
-	
-	
-	You should see hci0 interface is up with this command
-  
-		$ hciconfig
 
 
 4. Testing
