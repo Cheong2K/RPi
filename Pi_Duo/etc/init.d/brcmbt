@@ -8,7 +8,7 @@ do_start () {
       gpio -g mode 17 alt3
       hciconfig
       insmod /lib/modules/`uname -r`/kernel/drivers/bluetooth/hci_uart.ko
-      /usr/bin/brcm -d --patchram /lib/firmware/brcm/43438A1.hcd --enable_hci --no2bytes --tosleep 1000 /dev/ttyAMA0 > /var/log/bt.firmware 2>&1
+      /usr/bin/brcm -d --patchram /lib/firmware/brcm/BCM43438A1.hcd --enable_hci --no2bytes --tosleep 1000 /dev/ttyAMA0 > /var/log/bt.firmware 2>&1
 
 }
 
