@@ -15,21 +15,23 @@ Pi_Duo Project
 	
 2. WiFi
 
-	Edit config.txt lacated in the SD Card (e.g. with a SD card reader).
+	Boot into the RPi and use command line to edit config.txt:
+
+		$ sudo nano /boot/config.txt
 
 	Add the following line to the file:
 
-    	dtoverlay=sdio,poll_once=on
+		dtoverlay=sdio,poll_once=on
 
-	Edit cmdline.txt, remove
+	Edit cmdline.txt,
+	
+		$ sudo nano /boot/cmdline.txt
+
+	Remove
   
 		console=ttyAMA0,115200
 
-	Boot into the RPi (X-Window), you should be able to associate an WiFi AP.
-
-	Note: if you do not have a PC or SD card reader, boot into the RPi and use command line to do that:
-
-		$ sudo nano /boot/config.txt
+	Reboot (remove power) into the RPi (X-Window), you should be able to associate an WiFi AP.
 
 	You can check with the following command to see its IP address.
 
@@ -38,7 +40,7 @@ Pi_Duo Project
 
 3. Bluetooth
 
-	After step 1, you should be able to get access to the Internet.
+	After step 2, you should be able to get access to the Internet.
   
 	Download this repository, copy two files (brcm and brcmbt) to your Pi.
 
@@ -50,7 +52,7 @@ Pi_Duo Project
 	 
 		$ sudo mv brcmbt /etc/init.d
 		
-	Change mode to some files and update rc.d:
+	Change mode to these two files and update rc.d:
   
 		$ sudo chmod +x /usr/bin/brcm
 
