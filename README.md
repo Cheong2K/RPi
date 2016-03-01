@@ -10,7 +10,7 @@ Pi_Duo Project
 
 		https://www.raspberrypi.org/downloads/noobs/
 
-	Note: this package is only for kernel NOOBS 1.8.0 or above
+	Note: this package is only for NOOBS 1.8.0 or above
 	
 	
 2. WiFi
