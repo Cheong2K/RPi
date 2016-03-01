@@ -42,6 +42,14 @@ Pi_Duo Project
   
 	Download this repository, copy two files (brcm and brcmbt) to your Pi.
 
+	Put `brcm` to folder /usr/bin
+	
+		$ sudo mv brcm /usr/bin
+	
+	Put `brcmbt` to folder /etc/init.d
+	 
+		$ sudo mv brcmbt /etc/init.d
+		
 	Change mode to some files and update rc.d:
   
 		$ sudo chmod +x /usr/bin/brcm
@@ -50,7 +58,7 @@ Pi_Duo Project
   
 		$ sudo update-rc.d -f brcmbt defaults
 
-	Install Bluetooth Manager
+	Install Bluetooth Manager (if you need to use GUI for Bluetooth)
 
 		$ sudo apt-get install blueman
 
