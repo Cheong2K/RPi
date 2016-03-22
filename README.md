@@ -1,7 +1,7 @@
 # RPi
 
 
-Pi_Duo Project
+IoT HAT Project
 
 
 1. Prerequisites
@@ -100,7 +100,7 @@ Pi_Duo Project
 
 5. Known Issues
 
-	* The command 'reboot' will not work for the PiDuo, after reboot, the PiDuo will not work properly, e.g.
+	* The command 'reboot' will not work for the IoT HAT; after reboot, the IoT HAT will not work properly, e.g.
 	
 			$ sudo reboot  
 
@@ -108,5 +108,5 @@ Pi_Duo Project
 	
 			$ sudo shutdown now
 			
-	* This will be fixed in next board desgin by adding a GPIO to reset the PiDuo.
+	* This will be fixed in next board desgin by adding a GPIO to reset the IoT HAT.
 	
