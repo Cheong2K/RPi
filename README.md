@@ -48,14 +48,9 @@ IoT HAT Project
 
 	After step 2, you should be able to get access to the Internet.
   
-	Download copy two files (brcm and brcmbt) to your Pi.
+	Download the script file `brcmbt` to your Pi,
 
-		$ wget http://redbearlab.github.io/rpi/brcm
 		$ wget http://redbearlab.github.io/rpi/brcmbt
-
-	Put `brcm` to folder /usr/bin
-	
-		$ sudo mv brcm /usr/bin
 	
 	Put `brcmbt` to folder /etc/init.d
 	 
