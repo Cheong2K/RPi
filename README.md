@@ -6,7 +6,7 @@ IoT HAT Project
 
 1. Prerequisites
 
-	Install NOOBS 1.8.0 (Linux kernel version 4.1.18) first:
+	Install NOOBS 1.8.0 (Linux kernel version 4.1.18) or above first:
 
 		https://www.raspberrypi.org/downloads/noobs/
 
@@ -31,8 +31,14 @@ IoT HAT Project
   
 		console=ttyAMA0,115200
 
-	Reboot (remove power) into the RPi (X-Window), you should be able to associate an WiFi AP.
+	Reboot (remove power) into the RPi
+	
+	> You should be able to associate an WiFi AP using the GUI (X-Window) tool
 
+	> You can also use this link for command line:
+	
+		https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md
+	
 	You can check with the following command to see its IP address.
 
 		$ ifconfig
