@@ -99,9 +99,10 @@ IoT HAT Project
   
 		$  dns-sd -B _workstation._tcp
     
-	And then, you can use ssh to login to the RPi
+	And then, you can use ssh to login to the RPi (enable ssh first using raspi-config)
     
-
+		$ ssh pi@raspberrypi.local
+		
 5. Known Issues
 
 	* The command 'reboot' will not work for the IoT HAT; after reboot, the IoT HAT will not work properly, e.g.
