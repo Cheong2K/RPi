@@ -85,17 +85,17 @@ IoT HAT Project
 
 4. Testing
 
-	3.1 To test iBeacon, see:
+	4.1 To test iBeacon, see:
   
     	https://github.com/dburr/linux-ibeacon/
   
-	3.2 To test WiFi speed:
+	4.2 To test WiFi speed:
 
 		$ curl -O ftp.cuhk.edu.hk/pub/Linux/ubuntu-releases/15.10/ubuntu-15.10-desktop-amd64.iso
 
 	Note: do the same command on OSX to compare.
     
-	3.3 After WiFi setup, you can use mDNS to get the IP address of the RPi (e.g. no HDMI connection)
+	4.3 After WiFi setup, you can use mDNS to get the IP address of the RPi (e.g. no HDMI connection)
   
 		$  dns-sd -B _workstation._tcp
     
