@@ -56,10 +56,8 @@ IoT HAT Project
 	 
 		$ sudo mv brcmbt /etc/init.d
 		
-	Change mode to these two files and update rc.d:
+	Change mode to this file and update rc.d:
   
-		$ sudo chmod +x /usr/bin/brcm
-
 		$ sudo chmod +x /etc/init.d/brcmbt
   
 		$ sudo update-rc.d brcmbt defaults
