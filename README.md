@@ -16,9 +16,11 @@ IoT HAT Project
 
 		$ sudo nano /boot/config.txt
 
-	Add the following line to the file:
+	Add the following 3 lines to the file:
 
 		dtoverlay=sdio,poll_once=on
+		dtoverlay=gpio-poweroff,gpiopin=6,active_low=true
+		init_uart_clock=64000000
 
 	Edit cmdline.txt,
 	
