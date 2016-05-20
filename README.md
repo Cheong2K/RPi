@@ -6,13 +6,10 @@ IoT HAT Project
 
 1. Prerequisites
 
-	Install NOOBS 1.8.0 (Linux kernel version 4.1.18) or above first:
+	Install NOOBS 1.9.1 (current tested version) or above first:
 
 		https://www.raspberrypi.org/downloads/noobs/
 
-	Note: this package is only for NOOBS 1.8.0 or above
-	
-	
 2. WiFi
 
 	Boot into the RPi and use command line to edit config.txt:
@@ -29,7 +26,7 @@ IoT HAT Project
 
 	Remove
   
-		console=ttyAMA0,115200
+		console=serial0,115200
 
 	Reboot (remove power) into the RPi
 	
@@ -62,24 +59,13 @@ IoT HAT Project
   
 		$ sudo update-rc.d brcmbt defaults
 
-	Install Bluetooth Manager (if you need to use GUI for Bluetooth)
-
-		$ sudo apt-get install blueman
-
 	Reboot the RPi, you should see hci0 interface is up with this command
   
 		$ hciconfig
 		
 	Config your Bluetooth keyboard/mouse using the Bluetooth icon near the clock (upper-right corner).
-
-	Note: The blueman has problem to show the pairing key for keyboards to pair. Start a command line and use 'bluetoothctl', type the commands as shown: 
-
-		$ sudo bluetoothctl
-		[bluetooth]# agent KeyboardDisplay
-		[bluetooth]# default-agent
 	
-	Then, use blueman to do the pairing but use the pairing key shown in bluetoothctl. See 'pair.jpg'.
-
+		* NOOBS 1.9.1 already has Blueman and fix some bugs for pairing devices.
 
 4. Testing
 
