@@ -60,7 +60,11 @@ IoT HAT Project
 		
 	Config your Bluetooth keyboard/mouse using the Bluetooth icon near the clock (upper-right corner).
 	
-		* NOOBS 1.9.1 already has Blueman and fix some bugs for pairing devices.
+	Modify the script to run the command at boot time
+	
+		$ sudo nano /usr/bin/btuart
+		
+	Change the last line 460800 to 921600, and the reboot it. 
 
 4. Testing
 
