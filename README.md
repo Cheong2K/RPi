@@ -6,21 +6,26 @@ IoT HAT Project
 
 1. Prerequisites
 
-	Install NOOBS 1.9.1 (current tested version) or above first:
+	Install NOOBS:
 
 		https://www.raspberrypi.org/downloads/noobs/
 
+        There are 3 files to be changed:
+	
+		* /boot/config.txt
+		* /boot/cmdline.txt
+		* /usr/bin/btuart
+		
 2. WiFi
 
-	Boot into the RPi and use command line to edit config.txt:
+	Boot into the RPi and use command line to edit the config.txt:
 
 		$ sudo nano /boot/config.txt
 
-	Add the following 3 lines to the file:
+	Add the following lines to the file:
 
-		dtoverlay=sdio,poll_once=on
+		dtoverlay=sdio,poll_once=on,sdio_overclock=20
 		dtoverlay=gpio-poweroff,gpiopin=6,active_low=true
-		init_uart_clock=64000000
 
 	Edit cmdline.txt,
 	
@@ -30,7 +35,7 @@ IoT HAT Project
   
 		console=serial0,115200
 
-	Reboot (remove power) into the RPi
+	Reboot (remove power)
 	
 	> You should be able to associate an WiFi AP using the GUI (X-Window) tool
 
@@ -45,23 +50,11 @@ IoT HAT Project
 
 3. Bluetooth
 
-	After step 2, you should be able to get access to the Internet.
-  
-	Download the script file `brcmbt` to your Pi,
-
-		$ wget http://redbearlab.github.io/rpi/brcmbt
+	Run the following command
 	
-	Put `brcmbt` to folder /etc/init.d
-	 
-		$ sudo mv brcmbt /etc/init.d
-		
-	Change mode to this file and update rc.d:
-  
-		$ sudo chmod +x /etc/init.d/brcmbt
-  
-		$ sudo update-rc.d brcmbt defaults
+		$ /usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -		
 
-	Reboot the RPi, you should see hci0 interface is up with this command
+	Then, you should see hci0 interface is up with this command
   
 		$ hciconfig
 		
