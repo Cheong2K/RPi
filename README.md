@@ -63,7 +63,7 @@ IoT HAT Project
 		
 	Config your Bluetooth keyboard/mouse using the Bluetooth icon near the clock (upper-right corner).
 	
-	Modify the script to run the command at boot time
+	Modify the script,
 	
 		$ sudo nano /usr/bin/btuart
 		
@@ -74,9 +74,9 @@ IoT HAT Project
 		/usr/bin/gpio -g write 5 1
 		/usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -
 
-	Add /usr/bin/btuart to then end of ~/.bashrc
+	After reboot, you should run this script to start the Bluetooth
 	
-		$ nano ~/.bashrc
+		$ /usr/bin/btuart
 		
 4. Testing
 
