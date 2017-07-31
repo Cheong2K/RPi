@@ -53,8 +53,8 @@ IoT HAT Project
 	Run the following commands
 	
 		$ gpio -g mode 5 out
+		$ gpio -g write 5 0
 		$ gpio -g write 5 1
-		
 		$ /usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -		
 
 	Then, you should see hci0 interface is up with this command
@@ -70,9 +70,14 @@ IoT HAT Project
 	Change the last line with the following lines and the reboot it, e.g.
 	
 		/usr/bin/gpio -g mode 5 out
+		/usr/bin/gpio -g write 5 0
 		/usr/bin/gpio -g write 5 1
 		/usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -
 
+	Add /usr/bin/btuart to then end of ~/.bashrc
+	
+		$ nano ~/.bashrc
+		
 4. Testing
 
 	4.1 To test iBeacon, see:
