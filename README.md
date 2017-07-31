@@ -66,7 +66,7 @@ IoT HAT Project
 	
 		$ sudo nano /usr/bin/btuart
 		
-	Change the last line with the following lines and the reboot it, e.g.
+	Change the last line with the following lines, e.g.
 	
 		/usr/bin/gpio -g mode 5 out
 		/usr/bin/gpio -g write 5 1
@@ -77,7 +77,7 @@ IoT HAT Project
 	
 		$ sudo nano /etc/rc.local
 	
-	Before 'exit 0', add '/usr/bin/btuart', e.g.
+	Before 'exit 0', add '/usr/bin/btuart' and then reboot the board, e.g.
 	
 		/usr/bin/btuart
 		
