@@ -50,8 +50,11 @@ IoT HAT Project
 
 3. Bluetooth
 
-	Run the following command
+	Run the following commands
 	
+		$ gpio -g mode 5 out
+		$ gpio -g write 5 1
+		
 		$ /usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -		
 
 	Then, you should see hci0 interface is up with this command
@@ -64,8 +67,10 @@ IoT HAT Project
 	
 		$ sudo nano /usr/bin/btuart
 		
-	Change the last line, serial1 -> serial0 and 460800 -> 921600, and the reboot it, e.g.
+	Change the last line with the following lines and the reboot it, e.g.
 	
+		/usr/bin/gpio -g mode 5 out
+		/usr/bin/gpio -g write 5 1
 		/usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -
 
 4. Testing
