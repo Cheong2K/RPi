@@ -64,7 +64,9 @@ IoT HAT Project
 	
 		$ sudo nano /usr/bin/btuart
 		
-	Change the last line 460800 to 921600, and the reboot it. 
+	Change the last line, serial1 -> serial0 and 460800 -> 921600, and the reboot it, e.g.
+	
+		/usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -
 
 4. Testing
 
