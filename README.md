@@ -53,7 +53,6 @@ IoT HAT Project
 	Run the following commands
 	
 		$ gpio -g mode 5 out
-		$ gpio -g write 5 0
 		$ gpio -g write 5 1
 		$ /usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -		
 
@@ -70,14 +69,20 @@ IoT HAT Project
 	Change the last line with the following lines and the reboot it, e.g.
 	
 		/usr/bin/gpio -g mode 5 out
-		/usr/bin/gpio -g write 5 0
 		/usr/bin/gpio -g write 5 1
+		sleep 1
 		/usr/bin/hciattach /dev/serial0 bcm43xx 921600 noflow -
 
-	After reboot, you should run this script to start the Bluetooth
+	Add the script to the rc.local to run it at boot time automatically,
 	
-		$ /usr/bin/btuart
+		$ sudo nano /etc/rc.local
+	
+	Before 'exit 0', add '/usr/bin/btuart', e.g.
+	
+		/usr/bin/btuart
 		
+		exit 0
+	
 4. Testing
 
 	4.1 To test iBeacon, see:
