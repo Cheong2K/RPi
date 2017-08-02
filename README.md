@@ -66,7 +66,7 @@ IoT HAT Project
 	
 		$ sudo nano /usr/bin/btuart
 		
-	Change the last line with the following lines, e.g.
+	Change the line ('/usr/bin/hciattach /dev/serial1 bcm43xx 460800 noflow -') with the following lines, e.g.
 	
 		/usr/bin/gpio -g mode 5 out
 		/usr/bin/gpio -g write 5 1
